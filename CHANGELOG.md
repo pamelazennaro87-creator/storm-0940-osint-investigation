@@ -4,44 +4,33 @@ All notable changes to this investigation repository are documented in this file
 
 Format: Keep a Changelog-inspired. Entries are dated in UTC. Only substantive updates are recorded.
 
+## [2026-10-26] - Original analytical models (not published elsewhere in this form)
+
+### Added
+- `analysis/tradecraft-evolution-2024-2026.md` — side-by-side matrix of Storm-0940 2024 (CovertNetwork-1658 era) vs 2026 (ARTEX + ConnectWise): continuity of mission/persistence, shift from user credentials to application identity, infrastructure OPSEC regression, defensive implications.
+- `analysis/consent-debt-and-post-containment-risk.md` — definition of consent debt; Layers A/B/C residual risk after vendor containment; prioritized work order; operational definition of “clean.”
+- `analysis/defender-roi-prioritization.md` — ranked defensive actions by impact on residual risk vs effort; 48-hour minimum viable response; MSP multiplier.
+
+### Notes
+- These three documents are original synthesis and prioritization frameworks. Underlying facts cite Microsoft 2024/2026 primary reporting and secondary technical notes; the models and rankings are products of this repository.
+
 ## [2026-10-26] - Adversary weaknesses and disruption map
 
 ### Added
-- `analysis/adversary-weaknesses-and-disruption.md` — operational weak points of Storm-0940 in the ConnectWise campaign and corresponding defensive disruption actions:
-  - reused low-cost VPS range (FranTech/Cloudzy)
-  - failed password spray as free early warning
-  - deterministic GUID-ordered sweep
-  - noisy persistence (Global Admin + secrets on other apps)
-  - dependence on residual/ghost consent
-  - public multi-actor ARTEX tooling
-  - narrow predictable time windows
-  - disruption map and three priority defensive cuts
-
-### Notes
-- Purely defensive analysis grounded in public Microsoft, Huntress, Sophos, Wiz, and WHOIS evidence.
-- No offensive content; focus is where the attack chain breaks under targeted hunting and tenant hygiene.
+- `analysis/adversary-weaknesses-and-disruption.md` — operational weak points and defensive disruption map.
 
 ## [2026-10-26] - Deep-dive under-examined angles
 
 ### Added
-- `analysis/under-examined-angles.md` — ghost consent, GUID sweep, residual persistence, unresolved initial access, infrastructure character, ARTEX multi-actor use, historical continuity, Graph blind spots, Europe/Italy gap.
-- `analysis/infrastructure-assessment.md` — 144.172.64.0/24 ownership, transient VPNs, defensive use rules.
-- `analysis/hypotheses-and-evidence.md` — claim vs evidence matrix (H1–H12).
-- `docs/victimology-and-sector-impact.md` — sectors, impact categories, MSP amplification.
-
-### Sources newly integrated
-- Sophos X-Ops, Huntress, public WHOIS/ASN, Expel/Todyl/CoreView/GCIT consistency checks.
+- `analysis/under-examined-angles.md`, `infrastructure-assessment.md`, `hypotheses-and-evidence.md`, `docs/victimology-and-sector-impact.md`.
 
 ## [2026-10-26] - Initial public investigation repository
 
 ### Added
-- Core structure: README, LICENSE, executive summary, timeline, technical analysis, attribution, Europe/Italy assessment, IOC CSV, KQL starting points.
-
-### Sources
-- Microsoft Security Blog (2026-10-21), ConnectWise Trust Center (through 2026-10-25), secondary corroboration.
+- Core structure, IOC CSV, initial KQL, executive docs.
 
 ## [Unreleased]
 
 ### Planned
-- Complete remaining docs (methodology, full sources inventory, limitations) and full KQL set.
-- Monitor ConnectWise restoration and any new primary advisories.
+- Methodology, full sources inventory, limitations, expanded KQL set.
+- Monitor primary-source updates.
