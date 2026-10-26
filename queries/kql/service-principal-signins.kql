@@ -1,0 +1,59 @@
+// =============================================================================
+// Service Principal Sign-ins (ConnectWise App IDs + optional IP pivot)
+// Purpose  : Identify successful and failed sign-ins for the published App IDs
+//            and/or the campaign-related IP addresses.
+// Product  : Microsoft Defender XDR / Microsoft Sentinel
+// Tables   : Commonly SigninLogs, AADServicePrincipalSignInLogs, or
+//            EntraIdSpnSignInEvents (name varies by workspace). Validate locally.
+// Time     : Recommend at least 2026-10-01 to present; prioritize 2026-10-15+
+// Notes    : No results does not prove absence of compromise.
+//            Review both ResultType == 0 (success) and non-zero (failure).
+// =============================================================================
+
+let AppIds = dynamic([
+    "506e08f9-6e9a-4da4-942b-a099a03644ae",
+    "24205314-2b89-4e07-a2a4-579e898a5640",
+    "0de14c77-b9b0-4137-9360-34878a929827",
+    "c921256f-04a7-44e8-9b2a-69c33929ba19"
+]);
+let CampaignIPs = dynamic([
+    "144.172.64.60",
+    "144.172.64.99",
+    "144.172.64.128",
+    "187.15.88.186",
+    "187.15.90.217",
+    "187.15.89.186"
+]);
+let StartTime = datetime(2026-10-01);
+let EndTime   = now();
+
+// --- Primary: filter by App ID (preferred) ---
+AADServicePrincipalSignInLogs
+| where TimeGenerated between (StartTime .. EndTime)
+| where AppId in (AppIds)
+| project
+    TimeGenerated,
+    AppId,
+    AppDisplayName,
+    ServicePrincipalId,
+    ServicePrincipalName,
+    IPAddress,
+    ResultType,
+    ResultDescription,
+    Location,
+    UserAgent,
+    CorrelationId,
+    ResourceDisplayName
+| order by TimeGenerated asc
+
+// --- Secondary pivot: campaign IPs (use in addition to, not instead of, App ID) ---
+// AADServicePrincipalSignInLogs
+// | where TimeGenerated between (StartTime .. EndTime)
+// | where IPAddress in (CampaignIPs)
+// | project TimeGenerated, AppId, AppDisplayName, IPAddress, ResultType, UserAgent, CorrelationId
+// | order by TimeGenerated asc
+
+// Interpretation guidance:
+// - Successful app-only sign-ins from unexpected IPs or outside known vendor ranges warrant investigation.
+// - Correlate CorrelationId / timestamp with subsequent Graph or audit events.
+// - Transient VPN IPs (187.15.x) are most relevant for 15-16 Oct 2026.
