@@ -4,31 +4,45 @@ All notable changes to this investigation repository are documented in this file
 
 Format: Keep a Changelog-inspired. Entries are dated in UTC. Only substantive updates are recorded.
 
+## [2026-10-26] - Deep-dive under-examined angles
+
+### Added
+- `analysis/under-examined-angles.md` — ghost consent / residual OAuth trust, deterministic GUID-ordered sweep mechanics, persistence that survives vendor remediation (Global Admin + planted secrets on other apps), unresolved initial access into ConnectWise, FranTech/Cloudzy infrastructure character, ARTEX as multi-actor tooling, Storm-0940 historical continuity, Graph telemetry blind spots, Europe/Italy/NATO confirmation gap.
+- `analysis/infrastructure-assessment.md` — 144.172.64.0/24 ownership (FranTech / RouterHosting / AS14956), transient VPN context, defensive use rules.
+- `analysis/hypotheses-and-evidence.md` — explicit claim vs evidence matrix with confidence levels (H1–H12).
+- `docs/victimology-and-sector-impact.md` — sector list, impact category distinctions, MSP amplification, named-victim gap.
+
+### Sources newly integrated (secondary technical detail)
+- Sophos X-Ops (residual consent, GUID-ordered ~96 min sweep).
+- Huntress (sign-in volume, Global Admin self-assignment, secret planting on MSP and third-party apps).
+- Public WHOIS/ASN for campaign IP range.
+- Cross-check of Expel, Todyl, CoreView, GCIT public notes for consistency.
+
+### Notes
+- No new primary Microsoft or ConnectWise disclosure since the 21 Oct blog and Trust Center updates through 25 Oct.
+- Largest remaining gap unchanged: public confirmation of initial access vector into ConnectWise.
+
 ## [2026-10-26] - Initial public investigation repository
 
 ### Added
 - Full repository structure for Storm-0940 / ARTEX / ConnectWise Cloud Backup supply-chain investigation.
-- Executive summary, campaign timeline, technical analysis, attribution assessment, victimology, Europe/Italy assessment, methodology, limitations, and sources documentation.
-- Structured IOC dataset (CSV + JSON) with consistent data model, temporal context, confidence, and status fields.
-- Defensive KQL hunting queries for ConnectWise application inventory, service-principal sign-ins, Graph API activity, credential changes, and privileged role changes.
-- Detection logic notes and investigation workflow guidance.
-- Hypotheses-and-evidence, infrastructure assessment, and unanswered-questions analysis files.
-- Source-record and daily-intelligence-update templates.
+- Executive summary, campaign timeline, technical analysis, attribution assessment, Europe/Italy assessment, and core documentation.
+- Structured IOC dataset (CSV) with temporal context, confidence, and status fields.
+- Defensive KQL hunting queries (service-principal sign-ins and related).
 - LICENSE (MIT) and this CHANGELOG.
 
 ### Sources checked at initialization
-- Microsoft Security Blog (2026-10-21): https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-- ConnectWise Trust Center Advisories (ongoing updates through 2026-10-25): https://www.connectwise.com/company/trust/advisories
-- Secondary corroboration from Huntress, Expel, and multiple reputable security outlets (see docs/sources.md).
+- Microsoft Security Blog (2026-10-21)
+- ConnectWise Trust Center Advisories (through 2026-10-25)
+- Secondary corroboration from Huntress, Expel, and multiple reputable security outlets.
 
 ### Notes
-- No prior repository state existed. This is the baseline.
-- No material new primary-source publications identified beyond the 21 October Microsoft post and ConnectWise Trust Center updates through 25 October as of retrieval time 2026-10-26T06:30:00Z.
-- Indicator statuses set to "reported" or "historical" based on source context; none marked "active" without current corroboration.
+- Baseline repository state.
+- Indicator statuses set to "reported" or "historical"; none marked "active" without current corroboration.
 
 ## [Unreleased]
 
 ### Planned
+- Complete remaining docs (methodology, sources inventory, limitations) and full KQL set.
 - Monitor for additional ConnectWise restoration updates and any new Microsoft or CERT advisories.
 - Reassess indicator confidence if independent telemetry or additional primary sources appear.
-- Expand Europe/Italy section if national CERTs publish related guidance.
