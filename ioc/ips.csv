@@ -1,0 +1,7 @@
+indicator_id,indicator_type,indicator_value,defanged_value,role,first_seen,last_seen,confidence,status,asn_org,notes,source
+IOC-IP-001,ip,144.172.64.99,144.172.64[.]99,password_spray,2026-10-10,2026-10-14,high,historical,FranTech/RouterHosting/Cloudzy AS14956,>151k failed logons; no successful auth observed in Microsoft telemetry,Microsoft Security Blog 2026-10-21
+IOC-IP-002,ip,144.172.64.128,144.172.64[.]128,app_only_signin_sweep,2026-10-15,2026-10-17,high,reported,FranTech/RouterHosting/Cloudzy AS14956,Primary sweep IP; high-volume service-principal sign-ins across many tenants,Microsoft / Huntress
+IOC-IP-003,ip,144.172.64.60,144.172.64[.]60,campaign_related,2026-10-15,2026-10-21,high,reported,FranTech/RouterHosting/Cloudzy AS14956,Related activity in same /24 block,Microsoft / ConnectWise
+IOC-IP-004,ip,187.15.88.186,187.15.88[.]186,transient_vpn_graph,2026-10-15,2026-10-16,medium,historical,,Meaningful only with ConnectWise App ID in same window; not permanent C2,Microsoft (secondary consistent reporting)
+IOC-IP-005,ip,187.15.90.217,187.15.90[.]217,transient_vpn_graph,2026-10-15,2026-10-16,medium,historical,,Same as IOC-IP-004,Microsoft (secondary consistent reporting)
+IOC-IP-006,ip,187.15.89.186,187.15.89[.]186,transient_vpn_graph,2026-10-15,2026-10-16,medium,historical,,Same as IOC-IP-004,Microsoft (secondary consistent reporting)
