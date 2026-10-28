@@ -26,6 +26,20 @@ Two official-source trails converge on the same IP:
 | `144.172.64.99` | Microsoft: Storm-0940 password-spray phase | ConnectWise/Microsoft later app-abuse reporting | Exact indicator continuity within the Storm-0940/ConnectWise cluster | High as Microsoft-reported; separate from the ARTEX Korean-finance cluster unless additional evidence links them |
 | ARTEX + Claude Code / LLMs | CrowdStrike and Zscaler | Microsoft's Storm-0940/ConnectWise report | Tool-family overlap only; ARTEX is dual-use and used by multiple actors | Low as an actor-identity discriminator |
 
+## Lower-confidence pivots: worth recording, not attribution
+
+### Shared user-agent strings between JPCERT case B and ConnectWise reporting
+
+JPCERT/CC's Japan advisory lists `curl/7.88.1` and `python-requests/2.34.2` as example user agents in **case B**, which concerns API abuse. Microsoft lists the same strings among user agents seen in the Storm-0940/ConnectWise activity. This is a literal string overlap, but the strings are common; JPCERT/CC explicitly warns that its JA4 example matches a general Python HTTP client, and other reporting notes that these user agents generate very large volumes of benign traffic.
+
+**Assessment:** low evidentiary weight. Use only in combination with the right endpoint, time window, application identity, IP, TLS fingerprint and request behavior. This does not link the operators.
+
+### Hosting-provider overlap candidate: `172.86.91.7` and `172.86.125.73`
+
+JPCERT/CC lists `172.86.91.7` in case B (API abuse; observed around 19 September). Obsidian reports `172.86.125.73` in Atera integration-credential testing on 18–19 October in the wider ConnectWise/Atera cluster. Public routing/hosting references place both addresses within RouterHosting/Cloudzy's AS14956 footprint, but the addresses are different and are not in the same /24.
+
+**Assessment:** low-confidence provider-level overlap only. A large hosting provider can host unrelated customers; ASN overlap is not actor attribution. Raise this only if additional evidence (same unusual TLS/client fingerprint with matching behavior, exact script/artifact reuse, or a stronger time-linked infrastructure relationship) emerges. Keep the two IPs separate in the evidence table.
+
 ## Operator mistakes and exposed artifacts worth matching
 
 ### 1. Publicly exposed working environment
