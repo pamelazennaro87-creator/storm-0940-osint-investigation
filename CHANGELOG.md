@@ -1,5 +1,27 @@
 # Changelog
 
+## [2026-10-28] - Cross-region infrastructure pivot and restoration status correction
+
+### Added
+- `analysis/cross-incident-linkage-assessment-2026-10-28.md` — exact reported IP overlap for `38.244.50.120` across CrowdStrike's South Korea ARTEX report and JPCERT/CC's Japan-related AI-pentest case E.
+- `ioc/related-artex-campaign-indicators.csv` — separate indicator dataset for related ARTEX activity, deliberately not merged into Storm-0940 IOCs.
+- Source-register entries SRC-010 through SRC-015 for ConnectWise's 28 October update, CrowdStrike, JPCERT/CC, Zscaler and Recorded Future.
+- Updated executive summary, campaign timeline, attribution assessment, unanswered questions, README, and IOC handling notes.
+
+### Corrected / clarified
+- ConnectWise's 28 October 16:00 UTC update says phased restoration is beginning through the new hardened application “ConnectWise Cloud Backup for M365”; this supersedes the prior 26 October target-date status.
+- The `38.244.50.120` overlap is a concrete Korea–Japan cross-report pivot, not proof of a shared person or attribution to Storm-0940.
+- JPCERT/CC's advisory and technical blog are treated as separate publications with distinct indicator scopes. Its advisory explicitly cautions that information is partial and fragmented.
+- The South Korea/Japan ARTEX cluster remains separate from the Storm-0940/ConnectWise cluster unless new primary evidence establishes a technical bridge.
+
+### Sources
+- ConnectWise Trust Center: https://www.connectwise.com/company/trust/advisories
+- CrowdStrike: https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/
+- JPCERT/CC advisory: https://www.jpcert.or.jp/at/2026/at260030.html
+- JPCERT/CC technical report: https://blogs.jpcert.or.jp/en/2026/10/web_api_attacks.html
+- Zscaler: https://www.zscaler.com/blogs/security-research/inside-global-ai-assisted-hacking-campaign
+- Recorded Future: https://www.recordedfuture.com/blog/tag-217-artex-south-korean-banks
+
 ## [2026-10-28] - Cross-incident operator-error analysis
 
 ### Added
