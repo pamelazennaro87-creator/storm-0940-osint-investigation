@@ -1,5 +1,16 @@
 # Changelog
 
+## [2026-10-28] - Additional low-confidence cross-incident pivots
+
+### Added
+- Documented the exact user-agent string overlap between JPCERT/CC case B and Microsoft's ConnectWise reporting, explicitly marked low-weight because both strings are common.
+- Documented a provider-level overlap candidate between JPCERT's `172.86.91.7` and the Atera-related `172.86.125.73`, based on secondary ASN/hosting data only.
+- Added source records SRC-016 and SRC-017 for the secondary network metadata and added both leads to unanswered questions.
+
+### Assessment
+- Neither generic user-agent overlap nor shared hosting provider is treated as evidence of a shared operator.
+- The exact `38.244.50.120` report-to-report overlap remains the strongest new Korea–Japan pivot. No direct public bridge to Storm-0940/ConnectWise has been established.
+
 ## [2026-10-28] - Repository integrity and documentation repair
 
 ### Fixed
