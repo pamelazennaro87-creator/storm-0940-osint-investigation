@@ -1,5 +1,23 @@
 # Changelog
 
+## [2026-10-28] - Cross-incident operator-error analysis
+
+### Added
+- `analysis/operator-errors-and-cross-incident-pivots-2026-10-28.md` — exposed operator-workspace artifacts, repeatable ARTEX-associated behavior and comparison with separately reported incidents.
+- `analysis/cross-incident-investigation-status-2026-10-28.md` — consolidated case status, confirmed facts vs unresolved claims, source links and prioritized follow-up plan.
+- Indexed the new cross-incident, operator-error, vendor-expansion and infrastructure reports in `README.md`.
+
+### Assessment delta
+- The investigation remains open because public reports expose concrete leads around attacker OPSEC, repeated automation sequences and possible post-compromise persistence.
+- CrowdStrike's South Korean finance case is kept separate from Storm-0940 attribution; shared use of ARTEX is not sufficient to establish a common operator.
+- No new IP was promoted to confirmed campaign infrastructure solely from secondary reporting. Existing indicators retain their source-specific confidence and time bounds.
+
+### Sources
+- Microsoft: https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
+- Wiz: https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors
+- CrowdStrike: https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/
+- Expel: https://expel.com/blog/storm-0940-artex-attacks-connectwise-app-abuse-and-okta-sign-ups/
+
 ## [2026-10-28] - Credential provenance and IP-event mapping follow-up
 
 ### Added
