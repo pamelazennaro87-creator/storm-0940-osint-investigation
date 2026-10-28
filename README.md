@@ -18,7 +18,8 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 | [docs/europe-italy-assessment.md](docs/europe-italy-assessment.md) | Regional relevance assessment |
 | [docs/investigation-methodology.md](docs/investigation-methodology.md) | How this research was conducted |
 | [docs/limitations-and-confidence.md](docs/limitations-and-confidence.md) | Gaps and caveats |
-| [docs/sources.md](docs/sources.md) | Full source inventory with retrieval dates |
+| [docs/sources.md](docs/sources.md) | Source register, claim mapping, retrieval dates, caveats |
+| [analysis/evidence-dependency-map.md](analysis/evidence-dependency-map.md) | Claim-to-source dependencies, independent corroboration, evidence-delta protocol |
 | [ioc/](ioc/) | Structured indicators (CSV/JSON) |
 | [queries/](queries/) | Defensive KQL and detection notes |
 | [analysis/](analysis/) | Hypotheses, infrastructure, open questions |
