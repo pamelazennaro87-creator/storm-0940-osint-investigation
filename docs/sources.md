@@ -107,7 +107,7 @@
 - **Publisher:** ConnectWise
 - **URL:** https://www.connectwise.com/company/trust/advisories
 - **Source type:** Primary vendor incident updates; mutable landing page
-- **Supports:** ConnectWise's stated discovery of unauthorized access to Cloud Backup application credentials; disabling seven application identities at 07:00 UTC on 17 October; certificate revocation and containment; continuing investigation and phased restoration; explicit warning that disabling vendor-side connections does not reverse changes already made inside customer tenants.
+- **Supports:** ConnectWise's stated discovery of unauthorized access to Cloud Backup application credentials; the seven application identities disabled at 07:00 UTC on 17 October; separate FAQ guidance for `c921256f-04a7-44e8-9b2a-69c33929ba19` (no direct threat observed, but disable pending safe re-enrollment); certificate revocation and containment; continuing investigation and phased restoration; explicit warning that vendor-side disabling does not reverse changes already made inside customer tenants.
 - **Important limits:** The page is mutable and should be captured as dated snapshots. The public updates reviewed here do not disclose the precise initial credential-exposure mechanism. Vendor-side containment is not proof that downstream customer-side persistence has been removed.
 - **Retrieved:** 2026-10-28
 
