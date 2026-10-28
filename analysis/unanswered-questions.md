@@ -51,3 +51,10 @@ These gaps are recorded so future updates can close them if new primary sources 
 
 15. **Current ConnectWise restoration and backup verification**  
     ConnectWise's 28 October update begins phased restoration with the new hardened application. Which partners have completed re-authorization and verified successful new snapshots? Public status does not establish individual tenant recovery. **Status: tenant-specific; public data insufficient.**
+
+
+16. **JPCERT case B user-agent overlap**  
+    JPCERT/CC lists `curl/7.88.1` and `python-requests/2.34.2` in case B; Microsoft lists the same strings in ConnectWise activity. Both are common client identifiers and are not unique actor fingerprints. **Status: weak pivot only; require endpoint, time, app identity and behavior to elevate.**
+
+17. **RouterHosting/Cloudzy provider overlap**  
+    JPCERT case B lists `172.86.91.7`; the ConnectWise/Atera reporting includes `172.86.125.73`. Secondary network references place both in AS14956 / RouterHosting-related ranges, but they are different IPs and the provider hosts many unrelated systems. **Status: low-confidence hosting overlap, not an actor link.**
