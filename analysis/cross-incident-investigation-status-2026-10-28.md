@@ -43,6 +43,12 @@ The best next step is to compare **exact artifacts, timestamps, infrastructure a
 - That the secondary-listed IPs `104.194.150.21` and `167.88.172.97` are confirmed campaign infrastructure without primary-source corroboration.
 - That an IP address identifies a person or permanent operator infrastructure.
 
+## Evidence delta — 2026-10-28
+
+A specific cross-region pivot is now documented in [the cross-incident linkage assessment](cross-incident-linkage-assessment-2026-10-28.md): `38.244.50.120` appears in CrowdStrike's South Korea ARTEX report and JPCERT/CC's Japan-related advisory case E. This is an exact reported IP overlap, not proof of a shared operator and not a direct bridge to Storm-0940.
+
+ConnectWise's 28 October 16:00 UTC update says phased restoration is beginning through the new hardened application “ConnectWise Cloud Backup for M365.” This supersedes the earlier 26 October target-date wording. Reauthorization does not prove backups have resumed; successful snapshots must be verified.
+
 ## Prioritized research plan
 
 ### 1. Exact artifact matching
