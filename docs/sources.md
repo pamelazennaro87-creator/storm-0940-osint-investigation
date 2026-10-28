@@ -98,13 +98,22 @@
 | ConnectWise app sign-ins from .128 | SRC-001 and SRC-003 | Huntress observed .128 in its telemetry; do not extend that observation to every IP in the same provider range. |
 | Okta activity from .99 | SRC-004 | Directly observed by Expel; its link to Storm-0940 is based on the shared IP only. |
 | Relationship between .99 and .128 | SRC-001, SRC-003, SRC-004, SRC-006 | Shared prefix and timing are context, not proof of common control. |
-| ConnectWise service status and restoration steps | SRC-002 | Cite the exact dated advisory/version, not just the landing page. |
+| ConnectWise service status and restoration steps | SRC-002, SRC-009 | Cite the exact dated advisory/version, not just the landing page. |
 | Independent confirmation of attribution | Not established by SRC-003, SRC-004 or SRC-008 alone | Do not describe repeated reporting of Microsoft’s conclusion as independent corroboration. |
+
+
+### SRC-009 — ConnectWise Trust Center: dated Cloud Backup incident updates (17–23 Oct 2026)
+- **Publisher:** ConnectWise
+- **URL:** https://www.connectwise.com/company/trust/advisories
+- **Source type:** Primary vendor incident updates; mutable landing page
+- **Supports:** ConnectWise's stated discovery of unauthorized access to Cloud Backup application credentials; disabling seven application identities at 07:00 UTC on 17 October; certificate revocation and containment; continuing investigation and phased restoration; explicit warning that disabling vendor-side connections does not reverse changes already made inside customer tenants.
+- **Important limits:** The page is mutable and should be captured as dated snapshots. The public updates reviewed here do not disclose the precise initial credential-exposure mechanism. Vendor-side containment is not proof that downstream customer-side persistence has been removed.
+- **Retrieved:** 2026-10-28
 
 ## Research gaps and maintenance
 
 - Capture a dated copy or archive URL for each ConnectWise Trust Center advisory used.
-- Investigate how ConnectWise's application credential was originally exposed; the public sources reviewed here do not establish that mechanism.
+- Investigate how ConnectWise's application credential was originally exposed; SRC-009 confirms unauthorized access but does not establish the mechanism.
 - Seek technical links between the .99 identity-attack cluster and the .128 application-abuse cluster that are stronger than shared ASN, timing or generic tooling.
 - Record whether each source directly observed an indicator or repeated another publisher's report.
 - Add exact article publication dates and relevant sections/short excerpts to individual indicator records in ioc/indicators.csv.
