@@ -80,7 +80,7 @@ This is a meaningful defensive correlation because hunting only for the ConnectW
 ## Sources
 
 - Microsoft Security Research / Microsoft Threat Intelligence, 21 Oct 2026: https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-- Expel, 21 Oct 2026: https://expel.com/blog/storm-0940-artex-attacks-connectwise-oauth-app-abuse-entra-id-hunting/
+- Expel, 21 Oct 2026: https://expel.com/blog/storm-0940-artex-attacks-connectwise-app-abuse-and-okta-sign-ups/
 - Wiz Research, 22 Oct 2026: https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors
 - ConnectWise Trust Center (mutable, dated updates): https://www.connectwise.com/company/trust/advisories
 
