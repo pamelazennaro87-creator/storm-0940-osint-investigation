@@ -1,5 +1,17 @@
 # Changelog
 
+## [2026-10-28] - Repository integrity and documentation repair
+
+### Fixed
+- Added the two methodology documents already linked by README.md: `docs/investigation-methodology.md` and `docs/limitations-and-confidence.md`. Their absence was a broken internal-link issue.
+- Quoted every field in `ioc/related-artex-campaign-indicators.csv` and checked that all 18 indicator rows have the same 11-column schema.
+- Kept related ARTEX indicators separate from the primary Storm-0940 IOC dataset.
+
+### Verification
+- Re-fetched the new linkage assessment, CSV, README, executive summary, timeline, attribution assessment, source register, unanswered questions, changelog and IOC handling notes from the target branch.
+- Verified the source register has unique IDs SRC-001 through SRC-015.
+- Verified the related-indicator CSV has consistent column counts and balanced quoting.
+
 ## [2026-10-28] - Cross-region infrastructure pivot and restoration status correction
 
 ### Added
