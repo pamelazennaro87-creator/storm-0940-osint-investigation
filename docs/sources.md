@@ -97,6 +97,7 @@
 | Attempts against more than 2,250 tenants | SRC-001 | “Attempted” is not equivalent to 2,250 confirmed compromises. |
 | ConnectWise app sign-ins from .128 | SRC-001 and SRC-003 | Huntress observed .128 in its telemetry; do not extend that observation to every IP in the same provider range. |
 | Okta activity from .99 | SRC-004 | Directly observed by Expel; its link to Storm-0940 is based on the shared IP only. |
+| Cross-platform identity workflow across Entra, Okta, Cognito and SaaS applications | SRC-018, with SRC-001 and SRC-004 for exact .99 overlap | Treat as behavioral synthesis; do not infer all events or all Wiz-listed IPs are Storm-0940. |
 | Relationship between .99 and .128 | SRC-001, SRC-003, SRC-004, SRC-006 | Shared prefix and timing are context, not proof of common control. |
 | ConnectWise service status and restoration steps | SRC-002, SRC-009 | Cite the exact dated advisory/version, not just the landing page. |
 | Independent confirmation of attribution | Not established by SRC-003, SRC-004 or SRC-008 alone | Do not describe repeated reporting of Microsoft’s conclusion as independent corroboration. |
@@ -177,6 +178,15 @@
 - **Source type:** Secondary hosting-range reference
 - **Supports:** Lists `172.86.124.0/22` among Cloudzy / RouterHosting hosting ranges, covering `172.86.125.73`.
 - **Important limits:** Shared hosting-provider footprint is weak correlation only; it does not prove a relationship between customers or incidents.
+- **Retrieved:** 2026-10-28
+
+### SRC-018 — Wiz Research: ARTEX in the Wild / identity-provider and SaaS vendor targeting
+- **Publisher:** Wiz Research
+- **Published:** 2026-10-22
+- **URL:** https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors
+- **Source type:** Primary security research based on workload and identity-provider telemetry
+- **Supports:** Reported ARTEX-associated activity targeting Okta, Microsoft Entra, AWS Cognito and proprietary software-vendor applications; repeated sequences involving source-map/configuration discovery, API enumeration, OAuth/SSO and account-recovery probing, self-registration, tenant-isolation testing and password spraying. Lists `144.172.64.60`, `.99`, and `.128` as indicators Microsoft attributes to Storm-0940, and separately lists `104.194.150.21` and `167.88.172.97` in the wider vendor-campaign indicator table.
+- **Important limits:** Wiz describes activity as overlapping with Microsoft's Storm-0940 reporting; the report does not justify attributing every observed vendor event or every listed IP to Storm-0940. User-agent strings and generic techniques are noisy. Preserve per-indicator provenance and do not merge broader-campaign IPs into the primary IOC list without a direct bridge.
 - **Retrieved:** 2026-10-28
 
 ## Research gaps and maintenance
