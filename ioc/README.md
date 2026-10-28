@@ -44,3 +44,12 @@ Both `indicators.csv` and `indicators.json` use a consistent field set:
 - Do not auto-block solely on presence in this dataset.
 - Always combine with contextual telemetry (App ID + IP + user agent + time window + subsequent Graph activity).
 - Transient VPN IPs (187.15.x) are meaningful primarily for 15–16 October 2026 and only in conjunction with the compromised application identities.
+
+
+## Related ARTEX campaigns — separate dataset
+
+`related-artex-campaign-indicators.csv` records infrastructure reported in the South Korean/global ARTEX activity and the exact `38.244.50.120` overlap with JPCERT/CC's Japan-related AI-pentest case E.
+
+This dataset is **intentionally separate** from `indicators.csv` and `indicators.json`, which track the Storm-0940 / ConnectWise campaign. Do not import the related-campaign indicators into a Storm-0940 blocklist or attribute them to Storm-0940 without new evidence.
+
+The CSV retains source, reported role, confidence and an explicit relationship-to-Storm-0940 field. A shared IP or tool is a pivot for investigation, not proof of a shared operator. The source may describe a proxy, jump host or temporary infrastructure; timestamps and incident context matter.

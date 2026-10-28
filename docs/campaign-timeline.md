@@ -24,6 +24,16 @@ Events are ordered by approximate occurrence time. Disclosure dates are recorded
 
 These phases share infrastructure overlap (144.172.64.x range) but differ in technique, success criteria, and impact surface. Metrics from Phase A must not be applied to Phase B without explicit source support.
 
+## Cross-incident updates and current vendor status (as of 2026-10-28)
+
+| Date (UTC) | Event | Cluster | Source | Evidence / confidence | Notes |
+|---|---|---|---|---|---|
+| 2026-10-07 | CrowdStrike publishes findings on an ARTEX host at `38.244.50.120` and exposed operator workspace linked to attacks on South Korean financial organizations | ARTEX-Korea | CrowdStrike | Primary report; high confidence that the source reports this association | Actor remains unnamed in CrowdStrike's report; do not attribute to Storm-0940 from tool overlap alone |
+| 2026-10-08, updated 2026-10-23 | JPCERT/CC's broader Japan-related incident advisory adds case E describing AI-assisted pentest frameworks (ARTEX, Cairn, CyberStrikeAI) and lists `38.244.50.120` among suspicious source IPs | ARTEX / Japan incident cluster | JPCERT/CC advisory | Primary CERT source; high confidence in published indicator overlap | Exact IP overlap with CrowdStrike's South Korea report; does not imply every Japanese case shares an actor. JPCERT/CC says the information is partial/fragmented |
+| 2026-10-21 | JPCERT/CC publishes technical analysis of several attack servers, Android APK analysis, API testing and separate attack-tool artifacts | Japan-related incident cluster | JPCERT/CC technical blog | Primary CERT report | JPCERT distinguishes multiple servers and cases; avoid collapsing them into one campaign |
+| 2026-10-21 | Zscaler publishes broader analysis of exposed AI-assisted operator workspace, project-state files, model configuration and proxy infrastructure | ARTEX-Korea/global workspace | Zscaler ThreatLabz | Primary vendor research | Useful exact-artifact pivots; not an attribution bridge to Storm-0940 |
+| 2026-10-28 16:00 | ConnectWise says phased restoration begins for Microsoft 365 backups/restores using new hardened application “ConnectWise Cloud Backup for M365”; partners must re-authorize tenants | ConnectWise vendor response | ConnectWise Trust Center | Primary vendor update | Supersedes 26 Oct target-date wording. Do not re-enable old apps unless specifically instructed; verify successful snapshots after reauthorization |
+
 ## Disclosure vs. Occurrence
 
 Disclosure dates (ConnectWise 16 Oct, Microsoft 21 Oct) post-date the bulk of the observed activity. Defenders reviewing logs should begin no later than 1 October 2026 where data retention permits, with priority on the 10–16 October window.
