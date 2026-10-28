@@ -65,3 +65,9 @@ These gaps are recorded so future updates can close them if new primary sources 
 19. **Complete ConnectWise application inventory and tenant-local status**  
     ConnectWise lists seven application identities disabled on 17 October and separately discusses `c921256f-04a7-44e8-9b2a-69c33929ba19`, for which it says no direct threat was observed but recommends disabling pending re-enrollment. Public sources therefore support an eight-ID review inventory with distinct status labels, not eight confirmed compromised apps. How many customer tenants still have one of these enterprise applications enabled, and which local service-principal IDs or tenant-side grants/secrets were modified? **Status: public inventory reconciled; tenant-by-tenant state is not publicly knowable.**
 
+20. **Cross-incident ARTEX linkage: distinguish common operator from shared tooling**  
+    CrowdStrike's South Korea report and JPCERT/CC case E both list `38.244.50.120`; Wiz describes identity-provider/SaaS targeting with some overlap to Microsoft's Storm-0940 indicators. Exact IP overlap is a valid pivot, but does not establish common authorship or connect the Korean/Japan-related cluster to Storm-0940. Can public sources provide matching timestamps, uncommon request sequences, file hashes, configuration/session artifacts, certificates, or a second independent infrastructure link? **Status: open; exact report overlap confirmed, common actor unproven.**
+
+21. **Prioritize evidence delta over indicator accumulation**  
+    Which new observation would materially change the current assessment rather than merely add another generic user-agent, ARTEX mention or hosting-provider match? Prefer distinctive artifacts, exact time-consistent sequences, OAuth/client identifiers, service-principal object IDs or credential-provenance evidence. **Status: methodology requirement; apply to every future update.**
+
