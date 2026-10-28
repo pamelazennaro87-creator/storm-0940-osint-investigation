@@ -1,5 +1,22 @@
 # Changelog
 
+## [2026-10-28] - Credential provenance and IP-event mapping follow-up
+
+### Added
+- `analysis/evidence-delta-credential-provenance-2026-10-28.md` — event-by-event mapping for .99, .60, .128 and the time-bounded VPN IPs; updated competing hypotheses; prioritized research queue for the ConnectWise credential's initial exposure path.
+- `docs/sources.md` — registered dated ConnectWise Trust Center incident updates as SRC-009 and clarified that the public material confirms unauthorized application-credential access but does not disclose the precise exposure mechanism.
+
+### Assessment delta
+- Microsoft's report and ConnectWise's dated updates support the campaign-level relationship reported by Microsoft, including an exact .99 indicator overlap in the vendor reporting.
+- The public evidence still does not expose a complete forensic chain from the original credential exposure through every adjacent identity-provider event. Keep .99, .60 and .128 mapped to their individual observations; shared prefix and timing are not proof of a common operator.
+- No new IOC value added or removed in this update; this is an evidence-quality and provenance update, not a new attribution.
+
+### Sources
+- Microsoft Security Blog (21 Oct 2026): https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
+- ConnectWise Trust Center, dated incident updates (17–23 Oct 2026): https://www.connectwise.com/company/trust/advisories
+- Huntress: https://www.huntress.com/blog/vendor-credential-enables-unauthorized-access
+- Expel: https://expel.com/blog/storm-0940-artex-attacks-connectwise-app-abuse-and-okta-sign-ups/
+
 All notable changes to this investigation repository are documented in this file.
 
 Format: Keep a Changelog-inspired. Entries are dated in UTC. Only substantive updates are recorded.
