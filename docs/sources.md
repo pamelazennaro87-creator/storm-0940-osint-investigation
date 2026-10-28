@@ -163,6 +163,22 @@
 - **Important limits:** Evidence of tools or attempted operations does not establish successful compromise of every referenced target. Keep TAG-217 / Korean-finance activity separate from Storm-0940 unless direct technical evidence emerges.
 - **Retrieved:** 2026-10-28
 
+### SRC-016 — IPinfo: 172.86.91.0/24 network metadata
+- **Publisher:** IPinfo
+- **URL:** https://ipinfo.io/ips/172.86.91.0/24
+- **Source type:** Secondary routing/ASN reference
+- **Supports:** Reports `172.86.91.0/24` within AS14956 / RouterHosting LLC.
+- **Important limits:** Provider/ASN data does not establish who controlled an IP or whether two customers share an operator. Treat only as hosting context.
+- **Retrieved:** 2026-10-28
+
+### SRC-017 — IPLocate: Cloudzy / RouterHosting network ranges
+- **Publisher:** IPLocate.io
+- **URL:** https://www.iplocate.io/data/hosting-providers/cloudzy
+- **Source type:** Secondary hosting-range reference
+- **Supports:** Lists `172.86.124.0/22` among Cloudzy / RouterHosting hosting ranges, covering `172.86.125.73`.
+- **Important limits:** Shared hosting-provider footprint is weak correlation only; it does not prove a relationship between customers or incidents.
+- **Retrieved:** 2026-10-28
+
 ## Research gaps and maintenance
 
 - Capture a dated copy or archive URL for each ConnectWise Trust Center advisory used.
