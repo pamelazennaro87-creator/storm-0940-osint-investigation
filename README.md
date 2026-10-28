@@ -21,6 +21,7 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 | [docs/sources.md](docs/sources.md) | Source register, claim mapping, retrieval dates, caveats |
 | [analysis/evidence-dependency-map.md](analysis/evidence-dependency-map.md) | Claim-to-source dependencies, independent corroboration, evidence-delta protocol |
 | [analysis/cross-platform-overlap-2026-10-28.md](analysis/cross-platform-overlap-2026-10-28.md) | Okta, Microsoft 365 and ConnectWise timeline comparison |
+| [analysis/identity-plane-correlation-assessment-2026-10-28.md](analysis/identity-plane-correlation-assessment-2026-10-28.md) | Cross-platform identity attack workflow across Entra, Okta, Cognito and SaaS integrations |
 | [analysis/divergent-actor-hypotheses-2026-10-28.md](analysis/divergent-actor-hypotheses-2026-10-28.md) | Competing explanations, .99/.128 discrepancy, ARTEX reuse by different actors |
 | [analysis/evidence-delta-credential-provenance-2026-10-28.md](analysis/evidence-delta-credential-provenance-2026-10-28.md) | Updated IP-to-event mapping, ConnectWise credential-origin gap, next research priorities |
 | [analysis/cross-incident-investigation-status-2026-10-28.md](analysis/cross-incident-investigation-status-2026-10-28.md) | Consolidated status, established facts, open questions and prioritized research plan |
@@ -40,7 +41,8 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 - **Password-spraying phase (10–14 Oct 2026):** Infrastructure at 144.172.64.99; 327 accounts across 8 organizations; >151,000 failed logons; peak ~2,900 failures/minute. **No successful authentication observed** in Microsoft telemetry for this phase.
 - **Supply-chain phase (from ~15 Oct 2026):** Compromised ConnectWise multi-tenant application identities used to authenticate as trusted apps into downstream Microsoft 365 tenants. Microsoft reports attempts against >2,250 tenants. In some environments, follow-on Graph activity included reconnaissance, credential modifications, and privileged-role changes. Time from targeting to privileged access reported as <3 hours in multiple cases.
 - **ConnectWise response (latest reviewed 28 Oct 2026, 16:00 UTC):** phased restoration begins for Microsoft 365 backups/restores through the new hardened application “ConnectWise Cloud Backup for M365.” Partners must re-authorize tenants and verify successful new snapshots. Do not re-enable previously disabled apps unless the vendor specifically instructs it.
-- **Important evidentiary distinction:** Targeted tenant ≠ successful authentication ≠ confirmed data access/exfiltration. Microsoft explicitly states that presence of an affected application or successful authentication does not necessarily indicate data was accessed or exfiltrated.
+- **Important evidentiary distinction:** Targeted tenant ≠ successful authentication ≠ confirmed data access/exfiltration.
+- **Cross-platform identity pivot (28 Oct):** public reporting documents a repeatable identity-boundary workflow across Entra, Okta, Cognito and SaaS vendor applications. The exact `144.172.64.99` overlap between Microsoft's spray report and Expel's Okta telemetry is meaningful, but Expel says it is the only link to Storm-0940 for the Okta event. See [identity-plane assessment](analysis/identity-plane-correlation-assessment-2026-10-28.md). Microsoft explicitly states that presence of an affected application or successful authentication does not necessarily indicate data was accessed or exfiltrated.
 
 ## Application IDs (Inventory & Hunting)
 
