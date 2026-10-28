@@ -58,3 +58,7 @@ These gaps are recorded so future updates can close them if new primary sources 
 
 17. **RouterHosting/Cloudzy provider overlap**  
     JPCERT case B lists `172.86.91.7`; the ConnectWise/Atera reporting includes `172.86.125.73`. Secondary network references place both in AS14956 / RouterHosting-related ranges, but they are different IPs and the provider hosts many unrelated systems. **Status: low-confidence hosting overlap, not an actor link.**
+
+18. **Identity-provider-agnostic workflow across Entra, Okta, Cognito and SaaS vendors**  
+    Wiz documents repeated sequences of application/API discovery, authentication and account-recovery probing, self-registration, tenant-isolation testing and password spraying. Expel separately reports Okta activity from `144.172.64.99`, which overlaps exactly with Microsoft's Storm-0940 spray indicator, while stating that the shared IP is its only link to Storm-0940 for the Okta event. Can public evidence identify distinctive request sequences, client identifiers, certificates, tenant IDs or historical infrastructure artifacts that establish whether the wider vendor activity belongs to one coordinated cluster? **Status: promising cross-platform behavioral pivot; common authorship and the ConnectWise credential-entry path remain unproven.**
+
