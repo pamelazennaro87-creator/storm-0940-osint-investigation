@@ -29,6 +29,12 @@ Microsoft reports the same `144.172.64.99` infrastructure in a large password-sp
 
 **Potential operational mistake:** reuse of a visible source address across several phases gave defenders a correlation pivot. Do not overstate this as a unique or permanent actor fingerprint.
 
+## A4. Cross-region infrastructure overlap: South Korea and Japan
+
+A stronger pivot than shared tool use has emerged: CrowdStrike associates `38.244.50.120` with the ARTEX host in its South Korean finance investigation, and JPCERT/CC's updated Japan-related advisory lists the same IP among suspicious sources for its AI-pentest case E. The exact overlap is high-confidence as a report-to-report fact. The relationship between operators remains unproven, and JPCERT/CC cautions that its incident information is partial and fragmented.
+
+This does not connect the Korean/Japan cluster to Storm-0940. See [the dedicated linkage assessment](cross-incident-linkage-assessment-2026-10-28.md) and the separate related-campaign indicator dataset.
+
 ## B. Similar incidents elsewhere — comparison, not attribution
 
 | Incident / source | Observed weakness or operator error | Relationship to Storm-0940 |
