@@ -24,6 +24,8 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 | [analysis/divergent-actor-hypotheses-2026-10-28.md](analysis/divergent-actor-hypotheses-2026-10-28.md) | Competing explanations, .99/.128 discrepancy, ARTEX reuse by different actors |
 | [analysis/evidence-delta-credential-provenance-2026-10-28.md](analysis/evidence-delta-credential-provenance-2026-10-28.md) | Updated IP-to-event mapping, ConnectWise credential-origin gap, next research priorities |
 | [analysis/cross-incident-investigation-status-2026-10-28.md](analysis/cross-incident-investigation-status-2026-10-28.md) | Consolidated status, established facts, open questions and prioritized research plan |
+| [analysis/cross-incident-linkage-assessment-2026-10-28.md](analysis/cross-incident-linkage-assessment-2026-10-28.md) | Exact IP overlap between South Korea ARTEX reporting and JPCERT/CC's Japan-related case E; attribution boundaries |
+| [ioc/related-artex-campaign-indicators.csv](ioc/related-artex-campaign-indicators.csv) | Separate, source-attributed indicators for other ARTEX campaigns; not merged into Storm-0940 IOCs |
 | [analysis/operator-errors-and-cross-incident-pivots-2026-10-28.md](analysis/operator-errors-and-cross-incident-pivots-2026-10-28.md) | Exposed attacker workspace, automation patterns and cross-incident comparison |
 | [analysis/vendor-expansion-campaigns-and-data-impact-2026-10-28.md](analysis/vendor-expansion-campaigns-and-data-impact-2026-10-28.md) | Vendor map, chronology, possible data impact and source register |
 | [analysis/new-infrastructure-and-intent-assessment-2026-10-28.md](analysis/new-infrastructure-and-intent-assessment-2026-10-28.md) | New IP pivots, intent assessment and attribution caveats |
@@ -37,7 +39,7 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 - **Tool:** ARTEX — open-source multi-agent LLM penetration-testing framework (Go + Next.js). Used by Storm-0940 as early as September 2026.
 - **Password-spraying phase (10–14 Oct 2026):** Infrastructure at 144.172.64.99; 327 accounts across 8 organizations; >151,000 failed logons; peak ~2,900 failures/minute. **No successful authentication observed** in Microsoft telemetry for this phase.
 - **Supply-chain phase (from ~15 Oct 2026):** Compromised ConnectWise multi-tenant application identities used to authenticate as trusted apps into downstream Microsoft 365 tenants. Microsoft reports attempts against >2,250 tenants. In some environments, follow-on Graph activity included reconnaissance, credential modifications, and privileged-role changes. Time from targeting to privileged access reported as <3 hours in multiple cases.
-- **ConnectWise response:** Initial advisory 16 Oct 2026; services suspended; phased restoration targeted for 26 Oct 2026 (subject to validation). Existing backup archives reported as encrypted/isolated with no indication of compromise.
+- **ConnectWise response (latest reviewed 28 Oct 2026, 16:00 UTC):** phased restoration begins for Microsoft 365 backups/restores through the new hardened application “ConnectWise Cloud Backup for M365.” Partners must re-authorize tenants and verify successful new snapshots. Do not re-enable previously disabled apps unless the vendor specifically instructs it.
 - **Important evidentiary distinction:** Targeted tenant ≠ successful authentication ≠ confirmed data access/exfiltration. Microsoft explicitly states that presence of an affected application or successful authentication does not necessarily indicate data was accessed or exfiltrated.
 
 ## Application IDs (Inventory & Hunting)
@@ -73,6 +75,13 @@ These VPN addresses are time-bounded. Do not treat them as permanent infrastruct
 - azure-toolkit/1.0
 
 Full structured data with confidence, status, temporal context, and sources is in ioc/indicators.csv and ioc/indicators.json.
+
+
+## Cross-Incident Pivot — 28 October 2026
+
+An exact reported IP overlap was identified between CrowdStrike's South Korean ARTEX investigation and JPCERT/CC's Japan-related AI-pentest case E: `38.244.50.120`. This is recorded in [the cross-incident linkage assessment](analysis/cross-incident-linkage-assessment-2026-10-28.md) and the separate [related ARTEX indicator CSV](ioc/related-artex-campaign-indicators.csv).
+
+**Attribution boundary:** this does not connect the South Korea/Japan cluster to Storm-0940. The ConnectWise cluster remains grounded in Microsoft's assessment and its own indicators. ARTEX is used by multiple actors, and JPCERT/CC describes several distinct, partially documented incident patterns.
 
 ## Defensive Use
 
