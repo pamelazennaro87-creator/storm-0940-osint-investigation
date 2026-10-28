@@ -1,5 +1,19 @@
 # Changelog
 
+## [2026-10-28] - Cross-platform identity-plane correlation
+
+### Added
+- `analysis/identity-plane-correlation-assessment-2026-10-28.md` synthesizes Microsoft, Expel and Wiz reporting into a cross-platform identity-boundary hypothesis spanning Entra, Okta, Cognito and SaaS integrations.
+- Added source-register entry SRC-018 for Wiz Research and indexed the assessment in README.md.
+- Added a research question focused on distinctive sequence-level artifacts and historical infrastructure provenance.
+
+### Assessment
+- The exact `144.172.64.99` overlap between Microsoft's spray reporting and Expel's Okta telemetry is preserved, but the two events remain separate. Expel says the shared IP is its only link to Storm-0940 for the Okta event.
+- Wiz's wider vendor-campaign indicators `104.194.150.21` and `167.88.172.97` are not promoted to confirmed Storm-0940 IOCs.
+- The cross-platform workflow is a useful behavioral synthesis, not proof of common authorship across every incident. The initial ConnectWise credential-exposure mechanism remains unresolved.
+
+
+
 ## [2026-10-28] - Additional low-confidence cross-incident pivots
 
 ### Added
