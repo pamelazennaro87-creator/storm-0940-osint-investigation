@@ -22,6 +22,7 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 | [analysis/evidence-dependency-map.md](analysis/evidence-dependency-map.md) | Claim-to-source dependencies, independent corroboration, evidence-delta protocol |
 | [analysis/cross-platform-overlap-2026-10-28.md](analysis/cross-platform-overlap-2026-10-28.md) | Okta, Microsoft 365 and ConnectWise timeline comparison |
 | [analysis/identity-plane-correlation-assessment-2026-10-28.md](analysis/identity-plane-correlation-assessment-2026-10-28.md) | Cross-platform identity attack workflow across Entra, Okta, Cognito and SaaS integrations |
+| [analysis/application-identity-inventory-reconciliation-2026-10-28.md](analysis/application-identity-inventory-reconciliation-2026-10-28.md) | Reconciled eight-ID ConnectWise/SkyKick application inventory and status caveats |
 | [analysis/divergent-actor-hypotheses-2026-10-28.md](analysis/divergent-actor-hypotheses-2026-10-28.md) | Competing explanations, .99/.128 discrepancy, ARTEX reuse by different actors |
 | [analysis/evidence-delta-credential-provenance-2026-10-28.md](analysis/evidence-delta-credential-provenance-2026-10-28.md) | Updated IP-to-event mapping, ConnectWise credential-origin gap, next research priorities |
 | [analysis/cross-incident-investigation-status-2026-10-28.md](analysis/cross-incident-investigation-status-2026-10-28.md) | Consolidated status, established facts, open questions and prioritized research plan |
@@ -46,15 +47,21 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 
 ## Application IDs (Inventory & Hunting)
 
-| Application | App ID | Notes |
-|-------------|--------|-------|
-| ConnectWise Cloud Backup (formerly SkyKick) | 506e08f9-6e9a-4da4-942b-a099a03644ae | Primary compromised identity |
-| ConnectWise – MS Teams | 24205314-2b89-4e07-a2a4-579e898a5640 | |
-| ConnectWise – MS Graph | 0de14c77-b9b0-4137-9360-34878a929827 | |
-| SkyKick Partner Portal | c921256f-04a7-44e8-9b2a-69c33929ba19 | |
+ConnectWise's Trust Center lists **seven application identities disabled on 17 October 2026**. It separately discusses `c921256f-04a7-44e8-9b2a-69c33929ba19`, says no direct threat was observed for that app, but recommends disabling it pending safe re-enrollment. This yields eight IDs to inventory, **not eight confirmed-compromised applications**. See the [full inventory reconciliation](analysis/application-identity-inventory-reconciliation-2026-10-28.md).
 
-A match of these App IDs in a tenant is **not** proof of malicious activity. Inventory them, review service-principal sign-ins and subsequent Graph/audit activity, and correlate with authorized vendor behavior.
+| Application | App ID | Vendor-reported status / note |
+|-------------|--------|-------------------------------|
+| ConnectWise Cloud Backup (formerly SkyKick) | `506e08f9-6e9a-4da4-942b-a099a03644ae` | Included in seven IDs disabled 17 Oct; primary incident application |
+| ConnectWise Cloud Management | `2399d300-6fca-4e6a-a686-399fefe75b83` | Included in seven IDs disabled 17 Oct |
+| Cloud Management — MS Teams | `24205314-2b89-4e07-a2a4-579e898a5640` | Included in seven IDs disabled 17 Oct |
+| Cloud Management — Exchange Online | `b78f6a77-d4e5-46e6-a686-399fefe75b83` | Included in seven IDs disabled 17 Oct |
+| Cloud Management — MS Graph | `0de14c77-b9b0-4137-9360-34878a929827` | Included in seven IDs disabled 17 Oct |
+| Cloud Management — Partner Center | `412dcf96-176d-4b3a-a1b0-4981ad66971e` | Included in seven IDs disabled 17 Oct |
+| Cloud Management — SharePoint Online | `b2b55f5b-7758-4719-8d8f-88ae172e6bdb` | Included in seven IDs disabled 17 Oct |
+| ConnectWise / SkyKick Partner Portal | `c921256f-04a7-44e8-9b2a-69c33929ba19` | Separately discussed by ConnectWise; no direct threat observed, but vendor recommends disabling pending re-enrollment |
 
+A match of an App ID in a tenant is **not** proof of malicious activity. Verify the local enterprise application's enabled state and record the tenant-specific service-principal Object ID. Vendor-side disablement does not prove local tenant settings were changed or remove tenant-side persistence.
+ 
 ## Primary Indicators (Defanged for Display)
 
 **Primary campaign IPs (Microsoft / ConnectWise context):**
