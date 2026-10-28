@@ -4,7 +4,7 @@
 
 This repository is maintained as a reproducible OSINT case study. It prioritizes primary sources, explicit confidence levels, temporal context for indicators, and clear separation between observed facts, source statements, and analyst assessment.
 
-> **Status (2026-10-26):** Initial structured investigation. Based on Microsoft Security Blog (21 Oct 2026) and ConnectWise Trust Center advisories (16–25 Oct 2026). No claim of exhaustive coverage or continuous monitoring.
+> **Research cutoff: 2026-10-28.** Initial structured investigation, refreshed against Microsoft Security Blog (21 Oct 2026) and ConnectWise Trust Center updates through 27 Oct 2026. No claim of exhaustive coverage or continuous monitoring.
 
 ## Quick Navigation
 
@@ -77,7 +77,7 @@ Full structured data with confidence, status, temporal context, and sources is i
 
 ## Methodology & Limitations
 
-See [docs/investigation-methodology.md](docs/investigation-methodology.md) and [docs/limitations-and-confidence.md](docs/limitations-and-confidence.md). This work is limited to publicly available sources. No unauthorized access, scanning of third-party systems, or interaction with potentially compromised accounts was performed.
+See [docs/investigation-methodology.md](docs/investigation-methodology.md), [docs/limitations-and-confidence.md](docs/limitations-and-confidence.md), and [docs/sources.md](docs/sources.md). This work is limited to publicly available sources. No unauthorized access, scanning of third-party systems, or interaction with potentially compromised accounts was performed.
 
 ## Update Protocol
 
