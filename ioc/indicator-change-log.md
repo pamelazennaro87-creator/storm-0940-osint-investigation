@@ -12,6 +12,17 @@ This file records substantive changes to the interpretation, provenance, or life
 - **Source register:** See SRC-001 (Microsoft), SRC-002/SRC-009 (ConnectWise), SRC-003 (Huntress), SRC-004 (Expel) in `docs/sources.md`.
 - **Research note:** `analysis/evidence-delta-credential-provenance-2026-10-28.md`.
 
+### 2026-10-28 — Cross-region ARTEX indicator overlap
+
+- **Indicator:** `38.244.50.120`.
+- **Change type:** New related-campaign dataset; no change to the Storm-0940 primary IOC inventory.
+- **Evidence delta:** CrowdStrike associates the IP with an ARTEX host in its South Korean finance report (7 Oct). JPCERT/CC's updated advisory (23 Oct) lists the same IP among suspicious sources for AI-pentest case E in the Japan-related incident cluster.
+- **Assessment:** High confidence that the two public reports contain an exact indicator overlap; medium confidence that the same infrastructure was used across the reported activity; no attribution to Storm-0940.
+- **Related indicators:** `154.201.79.246` and `205.214.59.31` overlap between CrowdStrike and Zscaler reporting for the Korean/global ARTEX workspace.
+- **Handling:** Related indicators are kept in `ioc/related-artex-campaign-indicators.csv`, not merged into `ioc/indicators.csv` or the primary Storm-0940 set.
+- **Sources:** SRC-011 CrowdStrike, SRC-012 JPCERT/CC, SRC-014 Zscaler in `docs/sources.md`.
+- **New analysis:** `analysis/cross-incident-linkage-assessment-2026-10-28.md`.
+
 ## Change-recording rule
 
 For each future update, record the date, exact indicator(s), source and publication date, what changed, and whether the change affects the value, confidence, status, temporal context, or merely the interpretation. Never silently convert shared infrastructure into actor attribution.
