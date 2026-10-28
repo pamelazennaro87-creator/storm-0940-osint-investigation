@@ -4,7 +4,7 @@
 
 This repository is maintained as a reproducible OSINT case study. It prioritizes primary sources, explicit confidence levels, temporal context for indicators, and clear separation between observed facts, source statements, and analyst assessment.
 
-> **Status (2026-10-26):** Initial structured investigation. Based on Microsoft Security Blog (21 Oct 2026) and ConnectWise Trust Center advisories (16–25 Oct 2026). No claim of exhaustive coverage or continuous monitoring.
+> **Status (2026-10-28):** Investigation remains open. New cross-incident research has been added on exposed operator artifacts, repeated ARTEX-associated behavior, vendor expansion, infrastructure pivots and post-containment persistence. This is not an exhaustive survey or continuous monitoring; attribution boundaries and confidence limits are documented.
 
 ## Quick Navigation
 
@@ -23,6 +23,10 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 | [analysis/cross-platform-overlap-2026-10-28.md](analysis/cross-platform-overlap-2026-10-28.md) | Okta, Microsoft 365 and ConnectWise timeline comparison |
 | [analysis/divergent-actor-hypotheses-2026-10-28.md](analysis/divergent-actor-hypotheses-2026-10-28.md) | Competing explanations, .99/.128 discrepancy, ARTEX reuse by different actors |
 | [analysis/evidence-delta-credential-provenance-2026-10-28.md](analysis/evidence-delta-credential-provenance-2026-10-28.md) | Updated IP-to-event mapping, ConnectWise credential-origin gap, next research priorities |
+| [analysis/cross-incident-investigation-status-2026-10-28.md](analysis/cross-incident-investigation-status-2026-10-28.md) | Consolidated status, established facts, open questions and prioritized research plan |
+| [analysis/operator-errors-and-cross-incident-pivots-2026-10-28.md](analysis/operator-errors-and-cross-incident-pivots-2026-10-28.md) | Exposed attacker workspace, automation patterns and cross-incident comparison |
+| [analysis/vendor-expansion-campaigns-and-data-impact-2026-10-28.md](analysis/vendor-expansion-campaigns-and-data-impact-2026-10-28.md) | Vendor map, chronology, possible data impact and source register |
+| [analysis/new-infrastructure-and-intent-assessment-2026-10-28.md](analysis/new-infrastructure-and-intent-assessment-2026-10-28.md) | New IP pivots, intent assessment and attribution caveats |
 | [ioc/](ioc/) | Structured indicators (CSV/JSON) |
 | [queries/](queries/) | Defensive KQL and detection notes |
 | [analysis/](analysis/) | Hypotheses, infrastructure, open questions |
