@@ -1,5 +1,21 @@
 # Changelog
 
+## [2026-10-28] - Master evidence dossier
+
+### Added
+- `analysis/master-evidence-dossier-2026-10-28.md` consolidates the event timeline, source-bounded claims, evidence grades, alternative hypotheses, defensive implications and prioritized collection plan.
+- Added a structured evidence ledger distinguishing direct source statements, exact-observable overlaps, behavioral correlations, weak contextual similarities and unresolved hypotheses.
+- Added explicit caveats for the `144.172.64.99` Microsoft/Expel overlap and the `38.244.50.120` CrowdStrike/JPCERT overlap.
+- Indexed the dossier in README.md and expanded the open research questions.
+
+### Assessment discipline
+- No claim that the Okta event was the initial access route into ConnectWise.
+- No claim that the South Korea/Japan-related ARTEX observations are one actor or linked to Storm-0940.
+- Generic user-agent and hosting-provider overlaps remain low-confidence leads.
+- Related-campaign indicators remain separate from the primary Storm-0940 IOC set.
+
+
+
 ## [2026-10-28] - ConnectWise application identity inventory reconciliation
 
 ### Added / corrected
