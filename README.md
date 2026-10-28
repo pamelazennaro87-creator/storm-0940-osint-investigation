@@ -4,7 +4,7 @@
 
 This repository is maintained as a reproducible OSINT case study. It prioritizes primary sources, explicit confidence levels, temporal context for indicators, and clear separation between observed facts, source statements, and analyst assessment.
 
-> **Status (2026-10-28):** Investigation remains open. New cross-incident research has been added on exposed operator artifacts, repeated ARTEX-associated behavior, vendor expansion, infrastructure pivots and post-containment persistence. This is not an exhaustive survey or continuous monitoring; attribution boundaries and confidence limits are documented.
+> **Status (2026-10-28):** Investigation remains open. New cross-incident research has been added on exposed operator artifacts, repeated ARTEX-associated behavior, vendor expansion, infrastructure pivots and post-containment persistence. This is not an exhaustive survey or continuous monitoring; attribution boundaries and confidence limits are documented. A detailed master dossier now consolidates source-bounded findings, exact-IP pivots, competing hypotheses, evidence grades, defensive validation and next collection priorities.
 
 ## Quick Navigation
 
@@ -23,6 +23,7 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 | [analysis/cross-platform-overlap-2026-10-28.md](analysis/cross-platform-overlap-2026-10-28.md) | Okta, Microsoft 365 and ConnectWise timeline comparison |
 | [analysis/identity-plane-correlation-assessment-2026-10-28.md](analysis/identity-plane-correlation-assessment-2026-10-28.md) | Cross-platform identity attack workflow across Entra, Okta, Cognito and SaaS integrations |
 | [analysis/application-identity-inventory-reconciliation-2026-10-28.md](analysis/application-identity-inventory-reconciliation-2026-10-28.md) | Reconciled eight-ID ConnectWise/SkyKick application inventory and status caveats |
+| [analysis/master-evidence-dossier-2026-10-28.md](analysis/master-evidence-dossier-2026-10-28.md) | Detailed evidence ledger, timelines, confidence grades, alternative hypotheses, eight-ID inventory, and prioritized collection plan |
 | [analysis/divergent-actor-hypotheses-2026-10-28.md](analysis/divergent-actor-hypotheses-2026-10-28.md) | Competing explanations, .99/.128 discrepancy, ARTEX reuse by different actors |
 | [analysis/evidence-delta-credential-provenance-2026-10-28.md](analysis/evidence-delta-credential-provenance-2026-10-28.md) | Updated IP-to-event mapping, ConnectWise credential-origin gap, next research priorities |
 | [analysis/cross-incident-investigation-status-2026-10-28.md](analysis/cross-incident-investigation-status-2026-10-28.md) | Consolidated status, established facts, open questions and prioritized research plan |
