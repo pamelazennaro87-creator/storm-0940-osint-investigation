@@ -4,7 +4,7 @@ All notable changes to this investigation repository are documented in this file
 
 Format: Keep a Changelog-inspired. Entries are dated in UTC. Only substantive updates are recorded.
 
-## [2026-10-27] - ConnectWise restore target missed (operational)
+## [2026-10-28] - Source freshness and recovery-status review\n\n### Updated\n- Refreshed the root README against the ConnectWise Trust Center update dated 27 October. Phased-restoration preparations were complete, but required third-party validation remained pending; restoration was not confirmed as begun in that update.\n- Added `docs/investigation-methodology.md`, `docs/limitations-and-confidence.md`, and `docs/sources.md`.\n- Added `ioc/indicator-change-log.md` to record indicator review dates and avoid treating old observations as current activity.\n- Added an explicit 27 October recovery-status row to the campaign timeline.\n\n### Notes\n- No new indicator values were added in this review. The status change is operational recovery context, not a new technical indicator.\n\n## [2026-10-27] - ConnectWise restore target missed (operational)
 
 ### Observed
 - ConnectWise had targeted **Monday 26 October 2026** for beginning phased partner onboarding and restore access from existing Cloud Backup archives, subject to successful security validation.
