@@ -1,5 +1,19 @@
 # Changelog
 
+## [2026-10-28] - ConnectWise application identity inventory reconciliation
+
+### Added / corrected
+- Added `analysis/application-identity-inventory-reconciliation-2026-10-28.md` documenting the complete public eight-ID review inventory.
+- Expanded README's quick-reference table from four IDs to all seven identities explicitly listed as disabled by ConnectWise on 17 October, plus the separately documented Partner Portal ID.
+- Clarified that ConnectWise said no direct threat was observed for `c921256f-04a7-44e8-9b2a-69c33929ba19`, while still recommending disabling it pending safe re-enrollment.
+- Updated the source register and added a research question for tenant-local application state.
+
+### Assessment
+- Eight IDs form a defensive inventory/review set, not eight confirmed-compromised applications.
+- Vendor-side disabling and customer-tenant enterprise-application state are separate controls; tenant-specific verification remains necessary.
+
+
+
 ## [2026-10-28] - Cross-platform identity-plane correlation
 
 ### Added
