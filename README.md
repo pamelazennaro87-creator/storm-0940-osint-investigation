@@ -22,6 +22,7 @@ This repository is maintained as a reproducible OSINT case study. It prioritizes
 | [analysis/evidence-dependency-map.md](analysis/evidence-dependency-map.md) | Claim-to-source dependencies, independent corroboration, evidence-delta protocol |
 | [analysis/cross-platform-overlap-2026-10-28.md](analysis/cross-platform-overlap-2026-10-28.md) | Okta, Microsoft 365 and ConnectWise timeline comparison |
 | [analysis/divergent-actor-hypotheses-2026-10-28.md](analysis/divergent-actor-hypotheses-2026-10-28.md) | Competing explanations, .99/.128 discrepancy, ARTEX reuse by different actors |
+| [analysis/evidence-delta-credential-provenance-2026-10-28.md](analysis/evidence-delta-credential-provenance-2026-10-28.md) | Updated IP-to-event mapping, ConnectWise credential-origin gap, next research priorities |
 | [ioc/](ioc/) | Structured indicators (CSV/JSON) |
 | [queries/](queries/) | Defensive KQL and detection notes |
 | [analysis/](analysis/) | Hypotheses, infrastructure, open questions |
