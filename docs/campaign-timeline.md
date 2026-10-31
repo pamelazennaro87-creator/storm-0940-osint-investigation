@@ -24,7 +24,7 @@ Events are ordered by approximate occurrence time. Disclosure dates are recorded
 
 These phases share infrastructure overlap (144.172.64.x range) but differ in technique, success criteria, and impact surface. Metrics from Phase A must not be applied to Phase B without explicit source support.
 
-## Cross-incident updates and current vendor status (as of 2026-10-28)
+## Cross-incident updates and current vendor status (latest dated vendor update located on 2026-10-28; re-checked 2026-10-31)
 
 | Date (UTC) | Event | Cluster | Source | Evidence / confidence | Notes |
 |---|---|---|---|---|---|
