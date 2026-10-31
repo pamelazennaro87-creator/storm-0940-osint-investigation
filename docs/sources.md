@@ -1,6 +1,6 @@
 # Source Register — Storm-0940 / ARTEX / ConnectWise
 
-**Research cutoff:** 2026-10-28  
+**Research cutoff:** 2026-10-31  
 **Prepared for:** reproducible, defensive public-source OSINT  
 **Scope:** public reporting on the October 2026 ConnectWise Cloud Backup compromise and Microsoft’s assessment linking downstream activity to Storm-0940 and ARTEX.
 
@@ -24,7 +24,7 @@
 - **Source type:** Primary vendor threat-intelligence report
 - **Supports:** Microsoft’s attribution assessment; ARTEX usage; password-spray window and scale; reported IP indicators; affected ConnectWise application identities; downstream authentication and Microsoft Graph activity; observed credential/privilege changes in some environments; defensive hunting recommendations.
 - **Important limits:** Attribution is Microsoft’s assessment. The report explicitly distinguishes authentication from confirmed data access or exfiltration. The 151,000+ failed logons relate to the password-spray phase; do not present those failures as successful compromise.
-- **Retrieved:** 2026-10-28
+- **Retrieved:** 2026-10-31
 
 ### SRC-002 — ConnectWise Trust Center / Advisories
 - **Publisher:** ConnectWise
@@ -32,7 +32,7 @@
 - **Source type:** Primary vendor incident and service-status advisories
 - **Supports:** ConnectWise’s own statements about the Cloud Backup incident, investigation, mitigations, restoration and partner re-enrollment process.
 - **Important limits:** The page may be updated in place. For every claim based on it, capture the exact advisory title, its displayed update/publication date, and a dated copy or archive when available. A service-restoration milestone is not, by itself, proof that every downstream customer tenant is free of residual unauthorized access.
-- **Retrieved:** 2026-10-28
+- **Retrieved:** 2026-10-31
 
 ## Independent / secondary technical reporting
 
@@ -111,7 +111,7 @@
 - **Important limits:** The page is mutable and should be captured as dated snapshots. The public updates reviewed here do not disclose the precise initial credential-exposure mechanism. Vendor-side containment is not proof that downstream customer-side persistence has been removed.
 - **Retrieved:** 2026-10-28
 
-### SRC-010 — ConnectWise Trust Center: restoration update (28 Oct 2026, 16:00 UTC)
+### SRC-010 — ConnectWise Trust Center: restoration update (28 Oct 2026, 16:00 UTC; re-checked 31 Oct)
 - **Publisher:** ConnectWise
 - **URL:** https://www.connectwise.com/company/trust/advisories
 - **Source type:** Primary vendor status/advisory; mutable landing page
@@ -188,6 +188,10 @@
 - **Supports:** Reported ARTEX-associated activity targeting Okta, Microsoft Entra, AWS Cognito and proprietary software-vendor applications; repeated sequences involving source-map/configuration discovery, API enumeration, OAuth/SSO and account-recovery probing, self-registration, tenant-isolation testing and password spraying. Lists `144.172.64.60`, `.99`, and `.128` as indicators Microsoft attributes to Storm-0940, and separately lists `104.194.150.21` and `167.88.172.97` in the wider vendor-campaign indicator table.
 - **Important limits:** Wiz describes activity as overlapping with Microsoft's Storm-0940 reporting; the report does not justify attributing every observed vendor event or every listed IP to Storm-0940. User-agent strings and generic techniques are noisy. Preserve per-indicator provenance and do not merge broader-campaign IPs into the primary IOC list without a direct bridge.
 - **Retrieved:** 2026-10-28
+
+### Audit note — 2026-10-31
+- Re-checked the public ConnectWise status page on 2026-10-31. The latest dated update located in the page snapshot reviewed remains 2026-10-28 16:00 UTC; do not imply a newer service milestone without a newer dated vendor statement.
+- The re-check did not change actor attribution or promote any related ARTEX indicators into the primary Storm-0940 IOC set.
 
 ## Research gaps and maintenance
 
