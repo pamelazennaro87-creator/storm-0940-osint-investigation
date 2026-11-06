@@ -202,3 +202,17 @@
 - Add exact article publication dates and relevant sections/short excerpts to individual indicator records in ioc/indicators.csv.
 - Record any new source as a new SRC identifier; do not silently overwrite the basis for an earlier assessment.
 - When updating the assessment, log the change and its evidentiary reason in CHANGELOG.md and ioc/indicator-change-log.md.
+
+
+### SRC-019 — ConnectWise Trust Center: Cloud Backup restoration update (4 Nov 2026, 18:55 UTC; retrieved 6 Nov 2026)
+- **Publisher:** ConnectWise
+- **URL:** https://www.connectwise.com/company/trust/advisories
+- **Source type:** Primary vendor advisory; mutable landing page
+- **Supports:** ConnectWise reports Phase 1 (backup/restore for re-authorized Microsoft 365 tenants) and Phase 2 (customer access and monitoring) complete; Phase 3 partially complete, with Backup Health reporting and Export jobs available from 3 Nov while Billing API and billing reports remain in progress; Phase 4 partially available, with core notifications live and additional notifications rolling out gradually. Marketplace APIs were restored 3 Nov; Migrations 28 Oct; SaaS Security and Cloud Automation are described as fully restored, subject to partner reconnection of Microsoft 365/Azure integrations.
+- **Important limits:** This is a vendor-reported service-restoration status, not independent forensic validation and not proof that any individual customer tenant is clean. Re-authorization is required, and successful new snapshots must be verified. ConnectWise explicitly advises against re-enabling previously disabled applications unless instructed. Some dashboard elements and notifications remain incomplete.
+- **Retrieved:** 2026-11-06
+
+### Audit note — 2026-11-06
+- SRC-019 supersedes the 28 and 30 October restoration snapshots for current service availability; retain earlier entries as historical states rather than overwriting them.
+- Do not conflate service restoration with incident closure, tenant-level remediation, or proof that no persistence remains in customer environments.
+- No new actor attribution or IOC promotion is made by this status update.
