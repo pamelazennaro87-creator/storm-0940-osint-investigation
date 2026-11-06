@@ -68,3 +68,8 @@ Confidence is qualitative and claim-specific. A source can strongly support the 
 - [CrowdStrike — South Korean finance ARTEX campaign](https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/)
 - [JPCERT/CC advisory](https://www.jpcert.or.jp/at/2026/at260030.html)
 - [Zscaler — global AI-assisted campaign](https://www.zscaler.com/blogs/security-research/inside-global-ai-assisted-hacking-campaign)
+
+
+## ConnectWise restoration-status limitation — reviewed 2026-11-06
+
+The 4 November 2026 Trust Center update (SRC-019) is a mutable vendor advisory. It supports statements about what ConnectWise reports as restored or still in progress; it does **not** independently establish that each partner/customer tenant has been reviewed, that backup snapshots completed successfully, that historical snapshot gaps are recoverable, or that persistence is absent. Record tenant-level verification separately from vendor service availability. Preserve dated source snapshots where possible.
