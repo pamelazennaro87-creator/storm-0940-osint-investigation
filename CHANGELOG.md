@@ -184,3 +184,10 @@ Format: Keep a Changelog-inspired. Entries are dated in UTC. Only substantive up
 ### Planned
 - Methodology, full sources inventory, limitations, expanded KQL set.
 - Monitor primary-source updates (ConnectWise restore confirmation; any new Microsoft/Huntress IOC releases).
+
+
+## 2026-11-06 — ConnectWise restoration status refresh
+- Added SRC-019 for the ConnectWise Trust Center update dated 2026-11-04 18:55 UTC (retrieved 2026-11-06).
+- Updated the campaign timeline, README and executive summary to distinguish completed restoration phases from remaining Billing, dashboard and notification work.
+- Added an explicit limitation: vendor-reported service availability is not proof of tenant-level remediation, successful snapshots, or absence of persistence.
+- No actor attribution or IOC status was changed.
