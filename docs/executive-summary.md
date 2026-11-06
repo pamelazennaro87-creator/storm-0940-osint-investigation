@@ -1,4 +1,4 @@
-# Executive Summary — updated 2026-10-28
+# Executive Summary — updated 2026-11-06
 
 **Investigation focus:** Storm-0940 / ARTEX / ConnectWise Cloud Backup, with carefully separated cross-incident pivots involving ARTEX-related attacks reported in South Korea and Japan.
 
@@ -23,11 +23,11 @@ Microsoft separately assesses that Storm-0940 was responsible for the ConnectWis
 - **Broader ARTEX ecosystem:** JPCERT/CC names ARTEX alongside Cairn and CyberStrikeAI in a broader warning and cautions that its incident information is partial and fragmented. The incidents must be separated by case and evidence.
 - **Additional corroborating infrastructure:** CrowdStrike and Zscaler both report `154.201.79.246` and `205.214.59.31` in the South Korean/global ARTEX operator infrastructure context. These are not Storm-0940 indicators in this repository.
 
-## ConnectWise restoration update — 28 October 2026
+## ConnectWise restoration update — 4 November 2026
 
-ConnectWise's Trust Center update at 16:00 UTC on 28 October says phased restoration is beginning with Microsoft 365 backups and restores through the new, security-hardened application **“ConnectWise Cloud Backup for M365.”** Partners must re-authorize each tenant through the new application. Do not re-enable previously disabled applications unless ConnectWise specifically instructs it. Re-authorization alone does not prove backup operations have resumed; verify successful new snapshots.
+ConnectWise's Trust Center update at 18:55 UTC on 4 November reports Phase 1 (backup/restore for re-authorized Microsoft 365 tenants) and Phase 2 (customer access and monitoring) complete. Backup Health reporting, Export jobs and Marketplace APIs became available on 3 November. Billing API/reports remain in progress; core notifications are live with additional notifications rolling out gradually; some dashboard elements remain incomplete. SaaS Security and Cloud Automation are described as restored, subject to partner reconnection of Microsoft 365/Azure integrations.
 
-This supersedes the earlier target date of 26 October. It does not remove the need for individual tenant investigation.
+This is a vendor-reported service status, not independent forensic validation. Re-authorization alone does not prove successful backups or tenant cleanliness: verify new snapshots and investigate each tenant. Do not re-enable previously disabled applications unless ConnectWise specifically instructs it. See SRC-019 in the source register.
 
 ## Priority next steps
 
