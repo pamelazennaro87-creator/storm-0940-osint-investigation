@@ -37,3 +37,13 @@ These phases share infrastructure overlap (144.172.64.x range) but differ in tec
 ## Disclosure vs. Occurrence
 
 Disclosure dates (ConnectWise 16 Oct, Microsoft 21 Oct) post-date the bulk of the observed activity. Defenders reviewing logs should begin no later than 1 October 2026 where data retention permits, with priority on the 10–16 October window.
+
+
+## ConnectWise restoration status — 2026-11-04 (retrieved 2026-11-06)
+
+| Date (UTC) | Event | Cluster | Source | Evidence / confidence | Notes |
+|---|---|---|---|---|---|
+| 2026-11-03 | ConnectWise reports Backup Health reporting, Export jobs and Marketplace APIs restored | ConnectWise vendor response | ConnectWise Trust Center, SRC-019 | Primary vendor statement; high confidence that the vendor made this statement | Does not independently verify partner/customer operation |
+| 2026-11-04 18:55 | ConnectWise reports Phase 1 and Phase 2 complete; Phase 3 partially complete (Billing API/reports still in progress); Phase 4 partially available (core notifications live, additional notifications gradual) | ConnectWise vendor response | ConnectWise Trust Center, SRC-019 | Primary vendor statement; high confidence that the vendor made this statement | SaaS Security and Cloud Automation described as restored subject to partner reconnection; some dashboard elements remain incomplete |
+
+**Interpretation boundary:** service availability is not evidence that an individual Microsoft 365 tenant has been reviewed, that new snapshots completed, that every historical gap is recoverable, or that downstream persistence is absent. Follow the vendor's tenant-level investigation guidance and verify successful snapshots. Do not re-enable previously disabled applications unless ConnectWise specifically instructs it.
